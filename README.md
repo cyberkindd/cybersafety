@@ -1,2 +1,2 @@
 # cybersafety
-beind kind on the net
+being kind on the net
