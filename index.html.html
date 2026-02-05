@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberKind | Stop Cyberbullying</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink-1:#99e2c4;
+      --pink-2:#044b52;
+      --pink-3:#cbd411;
+      --pink-4:#0d5f06;
+      --pink-5:#d6336c;
+      --dark:#2b2b2b;
+      --white:#ffffff;
+    }
+
+    *{box-sizing:border-box; margin:0; padding:0}
+    body{
+      font-family:'Poppins', sans-serif;
+      background:linear-gradient(135deg,var(--pink-1),var(--pink-2));
+      color:var(--dark);
+      line-height:1.6;
+    }
+
+    header{
+      padding:4rem 1.5rem 3rem;
+      text-align:center;
+      background:linear-gradient(135deg,pink,red);
+      color:var(--white);
+      border-bottom-left-radius:3rem;
+      border-bottom-right-radius:3rem;
+    }
+
+    header h1{
+      font-size:2.6rem;
+      font-weight:700;
+      margin-bottom:0.5rem;
+    }
+
+    header p{
+      max-width:600px;
+      margin:0 auto 1.5rem;
+      font-size:1.05rem;
+    }
+
+    .cta{
+      display:inline-block;
+      background:var(--white);
+      color:var(--pink-5);
+      padding:0.75rem 1.6rem;
+      border-radius:2rem;
+      font-weight:600;
+      text-decoration:none;
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    section{
+      padding:3.5rem 1.5rem;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:2rem;
+    }
+
+    .card{
+      background:var(--white);
+      padding:2rem;
+      border-radius:1.5rem;
+      box-shadow:0 12px 30px rgba(0,0,0,0.08);
+      transition:transform 0.2s ease;
+    }
+
+    .card:hover{transform:translateY(-4px)}
+
+    .card h3{
+      color:var(--pink-5);
+      margin-bottom:0.6rem;
+    }
+
+    .card:first-child h3{
+      color:gold;
+    }
+
+    .card:last-child h3{
+      color:indigo;
+    }
+
+    .stats{
+      display:flex;
+      flex-wrap:wrap;
+      gap:1.5rem;
+      justify-content:center;
+      margin-top:2rem;
+    }
+
+    .stat{
+      background:linear-gradient(135deg,var(--pink-2),var(--pink-3));
+      color:var(--dark);
+      padding:1.5rem 2rem;
+      border-radius:1.5rem;
+      text-align:center;
+      min-width:200px;
+    }
+
+    .stat span{
+      display:block;
+      font-size:2rem;
+      font-weight:700;
+      color:var(--pink-5);
+    }
+
+    .stat:nth-child(1) span{
+      color:blue;
+    }
+
+    .stat:nth-child(2) span{
+      color:yellow;
+    }
+
+    .stat:nth-child(1){
+      background:rgb(1, 243, 94);
+    }
+
+    .stat:nth-child(2){
+      background:rgb(163, 25, 163);
+    }
+
+    form{
+      background:var(--white);
+      padding:2.5rem;
+      border-radius:2rem;
+      box-shadow:0 14px 35px rgba(0,0,0,0.1);
+    }
+
+    form h2{
+      color:rgb(138, 64, 0);
+      margin-bottom:1rem;
+      text-align:center;
+    }
+
+    label{
+      font-weight:500;
+      display:block;
+      margin-top:1rem;
+    }
+
+    input, textarea, select{
+      width:100%;
+      padding:0.75rem;
+      margin-top:0.4rem;
+      border-radius:0.75rem;
+      border:1px solid #dddddd;
+      font-family:inherit;
+    }
+
+    textarea{resize:vertical; min-height:120px}
+
+    button{
+      margin-top:1.5rem;
+      width:100%;
+      padding:0.9rem;
+      border:none;
+      border-radius:2rem;
+      background:linear-gradient(135deg,var(--pink-4),var(--pink-5));
+      color:var(--white);
+      font-size:1rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:opacity 0.2s ease;
+    }
+
+    button:hover{opacity:0.9}
+
+    .note{
+      font-size:0.85rem;
+      margin-top:0.8rem;
+      color:#a05252;
+      text-align:center;
+    }
+
+    footer{
+      text-align:center;
+      padding:2rem 1rem;
+      font-size:0.85rem;
+      color:#4d4a8e;
+    }
+
+    .messages{
+      margin-top:3rem;
+    }
+
+    .message{
+      background:var(--pink-1);
+      border-left:5px solid var(--pink-4);
+      padding:1.2rem;
+      border-radius:1rem;
+      margin-bottom:1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>CyberKind</h1>
+  <p>A safe, youth-friendly space to learn about cyberbullying, share experiences, and support one another online.</p>
+  <a href="#share" class="cta">Share Your Story</a>
+</header>
+
+<section>
+  <h2 style="text-align:center;color:rgb(3, 44, 52);margin-bottom:2rem;">What is Cyberbullying?</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>📱 What it looks like</h3>
+      <p>Cyberbullying can include hateful messages, online harassment, spreading rumours, sharing private content, or excluding people in digital spaces.</p>
+    </div>
+    <div class="card">
+      <h3>🧠 Why it matters</h3>
+      <p>It can seriously affect mental health, confidence, and academic performance—especially for teenagers who spend a lot of time online.</p>
+    </div>
+    <div class="card">
+      <h3>🤍 You’re not alone</h3>
+      <p>Many young people experience cyberbullying. Speaking up and getting support can make a real difference.</p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span>1 in 3</span> teens report being cyberbullied</div>
+    <div class="stat"><span>24/7</span> online access means bullying can follow you home</div>
+  </div>
+</section>
+
+<section id="share">
+  <form id="storyForm">
+    <h2>Share Your Experience or Ask for Help</h2>
+    <label for="type">What would you like to do?</label>
+    <select id="type" required>
+      <option value="">Select one</option>
+      <option value="experience">Share an experience</option>
+      <option value="help">Ask for help or advice</option>
+    </select>
+
+    <label for="name">Name (optional)</label>
+    <input type="text" id="name" placeholder="Anonymous is okay" />
+
+    <label for="message">Your message</label>
+    <textarea id="message" required placeholder="Write your story or question here..."></textarea>
+
+    <button type="submit">Submit</button>
+    <p class="note">This is a school awareness project. If you are in danger, please contact a trusted adult or local support service.</p>
+  </form>
+
+  <div class="messages" id="messages"></div>
+</section>
+
+<footer>
+  Made for a Global Perspectives project • Spread kindness online 💗
+</footer>
+
+<script>
+  const form = document.getElementById('storyForm');
+  const messagesDiv = document.getElementById('messages');
+
+  function loadMessages(){
+    const data = JSON.parse(localStorage.getItem('cyberkindMessages')) || [];
+    messagesDiv.innerHTML = '<h2 style="color:var(--pink-5);margin-bottom:1rem;">Community Voices</h2>';
+    data.slice().reverse().forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'message';
+      div.innerHTML = `<strong>${item.name || 'Anonymous'}:</strong><p>${item.message}</p>`;
+      messagesDiv.appendChild(div);
+    });
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const type = document.getElementById('type').value;
+    const name = document.getElementById('name').value;
+    const message = document.getElementById('message').value;
+
+    const data = JSON.parse(localStorage.getItem('cyberkindMessages')) || [];
+    data.push({ type, name, message });
+    localStorage.setItem('cyberkindMessages', JSON.stringify(data));
+
+    form.reset();
+    loadMessages();
+  });
+
+  loadMessages();
+</script>
+
+</body>
+</html>
